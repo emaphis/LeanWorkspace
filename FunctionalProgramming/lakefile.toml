@@ -1,0 +1,10 @@
+name = "FunctionalProgramming"
+version = "0.1.0"
+defaultTargets = ["functionalprogramming"]
+
+[[lean_lib]]
+name = "FunctionalProgramming"
+
+[[lean_exe]]
+name = "functionalprogramming"
+root = "Main"
