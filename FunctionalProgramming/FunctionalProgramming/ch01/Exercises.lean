@@ -33,6 +33,9 @@ def joinStringsWith (sep : String) (str1 : String) (str2 : String) :=
 def volume (height : Nat) (width : Nat) (depth : Nat) :=
   height * width * depth
 
+#check volume
+--  volume (height width depth : Nat) : Nat
+
 
 --  1.4.3. Exercises
 structure RectangularPrism where
@@ -73,6 +76,8 @@ def segment1 : Segment := { end1 := pt1, end2 := pt2 }
 #check RectangularPrism.height
 #check RectangularPrism.width
 #check RectangularPrism.depth
+#check RectangularPrism
+#check RectangularPrism.mk
 
 --  What are tne names and type introduced by these structures?
 structure Hamster where
@@ -85,9 +90,13 @@ structure Book where
   author : String
   price : Float
 
+#check Hamster         --  : Hamster : Type
+#check Hamster.mk      --  : Hamster.mk (name : String) (fluffy : Bool) : Hamster
 #check Hamster.name    --  : String
 #check Hamster.fluffy  --  : Bool
 
+#check Book         --  : Book : Type
+#check Book.makeBook -- Book.makeBook (title author : String) (price : Float) : Book
 #check Book.title   --  : String
 #check Book.author  --  : String
 #check Book.price   --  : Float
