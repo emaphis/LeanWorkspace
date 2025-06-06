@@ -27,3 +27,7 @@ I'll work on that awhile before retackling "Mechanics of Proof".
 A project for working through "Functional Programming in Lean"
 
 <https://lean-lang.org/functional_programming_in_lean>
+
+## More setup instuctons
+
+<https://www.ma.imperial.ac.uk/~buzzard/xena/formalising-mathematics-2024/Introduction/install.html>
