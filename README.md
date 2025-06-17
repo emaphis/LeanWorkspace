@@ -24,6 +24,8 @@ I'll work on that awhile before retackling "Mechanics of Proof".
 
 ./FunctionaProgramming
 
+./greeting  - an example from chapter 2
+
 A project for working through "Functional Programming in Lean"
 
 <https://lean-lang.org/functional_programming_in_lean>

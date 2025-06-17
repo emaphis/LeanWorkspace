@@ -131,9 +131,9 @@ def main'' : IO Unit := do
   IO.println "Bonjour!"
   englishGreeting
 
+/-
 --  See englishGreeting.lean
 
-/-
 *FunctionalProgramming\ch02>lean --run englishGreeting.lean
 Bonjour!
 Hello!
