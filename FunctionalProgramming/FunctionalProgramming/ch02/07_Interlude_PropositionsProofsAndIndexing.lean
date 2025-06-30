@@ -108,3 +108,136 @@ theorem trueIsTrue : True := by decide
 theorem trueOrFalse : True ∨ False := by decide
 
 theorem falseImpliesTrue : False → True := by decide
+
+
+--  Evidence as Arguments
+
+/-
+def third (xs : List α) : α := xs[2]
+
+failed to prove index is valid, possible solutions:
+  - Use `have`-expressions to prove the index is valid
+  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid
+  - Use `a[i]?` notation instead, result is an `Option` type
+  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid
+α : Type ?u.5379
+xs : List α
+⊢ 2 < xs.length
+-/
+
+--  the obligation to show that the list has at least three entries can be
+--  imposed on the caller by adding an argument that consists of evidence
+--  that the indexing operation is safe:
+
+def third (xs : List α) (ok : xs.length > 2) : α := xs[2]
+
+#eval third woodlandCritters (by decide)  --  "snail"
+
+
+--  Indexing Without Evidence
+
+-- Using Option
+
+def thirdOption (xs : List α) : Option α := xs[2]?
+
+#eval thirdOption woodlandCritters  --  some "snail"
+#eval thirdOption ["Only", "two"]   --  none
+
+--  crashes if the index is out of bounds
+#eval woodlandCritters[1]!  --  "deer"
+
+
+--  Messages You May Meet
+
+/-
+--  Decide can prove an array option is false
+#eval third ["rabit"] (by decide)
+
+tactic 'decide' proved that the proposition
+  ["rabit"].length > 2
+is false
+-/
+
+/-
+--  The simp and decide tactics do not automatically unfold definitions with def.
+
+theorem onePlusOneIsStillTwo : OnePlusOneIsTwo := by simp
+
+--  simp made no progress
+
+theorem onePlusOneIsStillTwo' : OnePlusOneIsTwo := by decide
+
+failed to synthesize
+  Decidable OnePlusOneIsTwo
+-/
+
+/-
+-- polymorphic functions that use unsafe indexing may produce the following message:
+def usafeThird (xs : List α) : α := xs[2]!
+
+failed to synthesize
+  Inhabited α
+-/
+
+/-
+--  Adding whitespace between a list and the brackets used for lookup can cause another message
+
+#eval woodlandCritters [1]
+
+function expected at
+  woodlandCritters
+term has type
+  List String
+-/
+
+
+--    Exercises
+
+theorem onePlusOneAndLessThan' : 1 + 1 = 2 ∨ 3 < 5 := by decide
+
+
+--  Prove the following theorems using rfl:
+
+theorem twoPlusThreeIsFive : 2 + 3 = 5 := by rfl
+theorem fifeteenMinsEightIsSeven  : 15 - 8 = 7 := by rfl
+theorem helloWorld : "Hello, ".append "world" = "Hello, world" := by rfl
+/-
+theorem fiveIsLessthaEighteen : 5 < 18 := by rfl
+tactic 'rfl' failed, the left-hand side
+  5
+is not definitionally equal to the right-hand side
+  18
+⊢ 5 < 18
+-/
+
+--  Prove the following theorems using by decide:
+
+theorem twoPlusThreeIsFiveD : 2 + 3 = 5 := by decide
+theorem fifeteenMinsEightIsSevenD : 15 - 8 = 7 := by decide
+theorem helloWorldD : "Hello, ".append "world" = "Hello, world" := by decide
+
+theorem fiveIsLessthaEighteen : 5 < 18 := by decide  --  What?
+
+
+--  Write a function that looks up the fifth entry in a list.
+--  Pass the evidence that this lookup is safe as an argument to the function.
+
+def fifth (xs : List α) (ok : xs.length > 5) : α := xs[5]
+
+def good : List Nat := [1,2,3,4,5,6]
+def short : List Int := [1,2]
+def empty : List Int := []
+
+#eval fifth good (by decide)  --  6
+
+/-
+#eval fifth short (by decide)
+tactic 'decide' proved that the proposition
+  short.length > 5
+is false
+
+#eval fifth empty (by decide)
+tactic 'decide' proved that the proposition
+  short.length > 5
+is false
+-/
