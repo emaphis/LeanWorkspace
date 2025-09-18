@@ -47,3 +47,13 @@ obtain ha | hb := h1
 ```
 
 08 - "And" Hypothesis
+
+09 - "Or" Goal
+
+```lean
+    left
+    calc
+        ...
+
+-- `left` selectec left part of goal, `right` selects the rest of the goal
+```
