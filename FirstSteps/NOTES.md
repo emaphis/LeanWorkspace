@@ -1,6 +1,6 @@
 # Notes for "Maths Proofs in Lean: First Steps"
 
-Getting started site: <https://www.youtube.com/@LeanFirstSteps>
+Getting started site: <https://www.youtube.com/@LeanFirstSteps/videos>
 
 GitHub repository: <https://github.com/rzeta0/Lean-First-Steps>
 
@@ -71,3 +71,11 @@ obtain ha | hb := h1
 11 - Existence
 
 ## Part III - Definitions & Lemmas
+
+12 - Odd & Even
+
+using predifined propositons in proofs
+
+- desimp  - simplifies an expression in the InfoView
+
+Even / Odd - creates propositions to solve for even/odd properties of humbers
