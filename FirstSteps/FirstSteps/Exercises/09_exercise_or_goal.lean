@@ -25,4 +25,4 @@ example {x : ℤ} (h : x = -1) : x = 1 ∨ x^2 = 1 ∨ x^3 = 1 := by
     x^2 = (-1)^2  := by rw [h]
     _   = 1   := by norm_num
 
--- `left` selectec left part of goal, `right` selects the rest of the goal
+-- `left` select left part of goal, `right` selects the rest of the goal

@@ -55,5 +55,15 @@ obtain ha | hb := h1
     calc
         ...
 
--- `left` selectec left part of goal, `right` selects the rest of the goal
+-- `left` select left part of goal, `right` selects the rest of the goal
+```
+
+-- 10 - "And" Goal
+
+```lean
+ constructor
+  · calc
+      ...
+  · calc
+      ...
 ```
