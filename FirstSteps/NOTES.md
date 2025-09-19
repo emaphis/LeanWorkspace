@@ -1,6 +1,6 @@
 # Notes for "Maths Proofs in Lean: First Steps"
 
-etting started site: <https://www.youtube.com/@LeanFirstSteps>
+Getting started site: <https://www.youtube.com/@LeanFirstSteps>
 
 GitHub repository: <https://github.com/rzeta0/Lean-First-Steps>
 
@@ -67,3 +67,7 @@ obtain ha | hb := h1
   · calc
       ...
 ```
+
+11 - Existence
+
+## Part III - Definitions & Lemmas
