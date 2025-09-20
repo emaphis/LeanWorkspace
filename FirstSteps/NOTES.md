@@ -93,3 +93,13 @@ Loogle <https://loogle.lean-lang.org/>
 Lemma's applied to a hypothesis
 
 apply at h
+
+15 - Zero Product
+
+```lean
+Mathlab lemma: mul_eq_zero => a · b = 0 <==> (a = 0) ∨ (b = 0)
+```
+
+tactic.mp  -> modus penens
+
+tactic.mpr -> modus.ponens reverse
