@@ -79,3 +79,17 @@ using predifined propositons in proofs
 - desimp  - simplifies an expression in the InfoView
 
 Even / Odd - creates propositions to solve for even/odd properties of humbers
+
+13 - Disequality
+
+apply - applies a lemma or theorem to the current goal, changing or solving goal
+
+exact -  applies a lemma or theorem exactly
+
+Loogle <https://loogle.lean-lang.org/>
+
+14 - Disequality Again
+
+Lemma's applied to a hypothesis
+
+apply at h
