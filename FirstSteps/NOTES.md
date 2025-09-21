@@ -103,3 +103,5 @@ Mathlab lemma: mul_eq_zero => a · b = 0 <==> (a = 0) ∨ (b = 0)
 tactic.mp  -> modus penens
 
 tactic.mpr -> modus.ponens reverse
+
+16 - Writing Our Own Lemma
