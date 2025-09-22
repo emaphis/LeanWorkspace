@@ -105,3 +105,5 @@ tactic.mp  -> modus penens
 tactic.mpr -> modus.ponens reverse
 
 16 - Writing Our Own Lemma
+
+17 - Using Our Own Lemma
