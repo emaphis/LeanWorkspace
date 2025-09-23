@@ -1,6 +1,6 @@
 # Notes for "Maths Proofs in Lean: First Steps"
 
-Getting started site: <https://www.youtube.com/@LeanFirstSteps/videos>
+Getting started videos: <https://www.youtube.com/@LeanFirstSteps/videos>
 
 GitHub repository: <https://github.com/rzeta0/Lean-First-Steps>
 
@@ -107,3 +107,10 @@ tactic.mpr -> modus.ponens reverse
 16 - Writing Our Own Lemma
 
 17 - Using Our Own Lemma
+
+18 - Our Own Definition
+
+```lean
+def Triangle (a: ℕ) : Prop := ∃ n, 2*a = n * (n + 1)
+--  /name   /variable/Type  S /definition
+```
