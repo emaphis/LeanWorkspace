@@ -114,3 +114,7 @@ tactic.mpr -> modus.ponens reverse
 def Triangle (a: ℕ) : Prop := ∃ n, 2*a = n * (n + 1)
 --  /name   /variable/Type  S /definition
 ```
+
+## Part IV - Interesting Proofs
+
+19 - Reductio Ad Absurdum
