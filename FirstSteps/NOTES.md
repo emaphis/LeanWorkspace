@@ -118,3 +118,5 @@ def Triangle (a: ℕ) : Prop := ∃ n, 2*a = n * (n + 1)
 ## Part IV - Interesting Proofs
 
 19 - Reductio Ad Absurdum
+
+20 - Contradictory Cases
