@@ -11,4 +11,5 @@
 
 --  Impossible types
 
---  #check String.append ["HELLO", " "] "world"
+--#check String.append ["HELLO", " "] "world"
+-- Can't append a list of Strings with a String

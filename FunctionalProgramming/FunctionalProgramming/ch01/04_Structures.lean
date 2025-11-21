@@ -39,7 +39,7 @@ def distance (p1 : Point) (p2 : Point) : Float :=
 #eval distance { x := 1.0, y := 2.0 } { x := 5.0, y := -1.0 }
 --  5.000000
 
---  Structures may share th same date components.
+--  Structures may share th same data components.
 
 structure Point3D where
   x : Float

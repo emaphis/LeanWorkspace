@@ -19,7 +19,7 @@ def maximum (n : Nat) (k : Nat) : Nat :=
   if n < k then k
   else n
 
-#eval maximum (5 + 8) (2 * 7)  --  1
+#eval maximum (5 + 8) (2 * 7)  --  14
 
 def spaceBetween (before : String) (after : String) : String :=
   String.append before (String.append " " after)
@@ -29,7 +29,7 @@ def spaceBetween (before : String) (after : String) : String :=
 
 --  1.3.2. Defining Types
 
-def Str : Type := String
+def Str : Type := String  -- Type alias
 
 def aStr : Str := "This is a string"
 
@@ -39,7 +39,7 @@ def aStr : Str := "This is a string"
 --  Longer natural number
 def NaturalNumber : Type := Nat
 
---  def thirtyEight : NaturalNumber := 38
+-- def thirtyEight : NaturalNumber := 38
 
 -- failed to synthesize
 --  OfNat NaturalNumber 38

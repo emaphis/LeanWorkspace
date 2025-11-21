@@ -16,9 +16,10 @@
 
 #eval String.append "It is " (if 1 > 2 then "yes" else "no")
 
--- Messages You May Meet
 
--- #eval String.append "It is "
+-- Messages You May Meet - Errors
+
+--#eval String.append "It is "
 
 -- could not synthesize a 'Repr' or 'ToString' instance for type
 --  String → String
